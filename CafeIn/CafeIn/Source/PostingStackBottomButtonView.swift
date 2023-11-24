@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class PostCellBottomButtonView: UIView {
+final class PostingStackBottomButtonView: UIView {
     
     let heartButton: UIButton = {
         let button = UIButton()
@@ -75,7 +75,7 @@ final class PostCellBottomButtonView: UIView {
 }
 
 // MARK: Configure UI
-extension PostCellBottomButtonView {
+extension PostingStackBottomButtonView {
     
     private func configureSubview() {
         [heartButtonStackView, commentButtonStackView].forEach {

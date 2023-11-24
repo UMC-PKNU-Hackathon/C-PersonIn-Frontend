@@ -7,13 +7,13 @@
 
 import UIKit
 
-final class PostArticleStackView: UIStackView {
+final class PostingArticleStackView: UIStackView {
     
-    private let postingCellHeaderView = PostingCellHeaderView()
+    private let postingCellHeaderView = PostingStackHeaderView()
     
-    let profileCellPagingImageView = ProfileCellPagingImageView()
+    let postingStackPagingImageView = PostingStackPagingImageView()
     
-    private let postCellBottomButtonView = PostCellBottomButtonView()
+    private let postingStackBottomButtonView = PostingStackBottomButtonView()
     
     private let postLabel: UILabel = {
         let label = UILabel()
@@ -29,7 +29,7 @@ final class PostArticleStackView: UIStackView {
         configureInitialSetting()
         configureSubViews()
         configureLayout()
-        profileCellPagingImageView.configureContents([UIImage(named: "imageData"), UIImage(named: "imageData"), UIImage(named: "imageData")])
+        postingStackPagingImageView.configureContents([UIImage(named: "imageData"), UIImage(named: "imageData"), UIImage(named: "imageData")])
     }
     
     required init(coder: NSCoder) {
@@ -37,7 +37,7 @@ final class PostArticleStackView: UIStackView {
     }
 }
 
-extension PostArticleStackView {
+extension PostingArticleStackView {
     
     private func configureInitialSetting() {
         axis = .vertical
@@ -47,7 +47,7 @@ extension PostArticleStackView {
     }
     
     private func configureSubViews() {
-        [postingCellHeaderView, profileCellPagingImageView, postCellBottomButtonView, postLabel].forEach {
+        [postingCellHeaderView, postingStackPagingImageView, postingStackBottomButtonView, postLabel].forEach {
             addArrangedSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
@@ -55,7 +55,7 @@ extension PostArticleStackView {
     
     private func configureLayout() {
         NSLayoutConstraint.activate([
-            profileCellPagingImageView.heightAnchor.constraint(equalTo: profileCellPagingImageView.widthAnchor)
+            postingStackPagingImageView.heightAnchor.constraint(equalTo: postingStackPagingImageView.widthAnchor)
         ])
     }
 }

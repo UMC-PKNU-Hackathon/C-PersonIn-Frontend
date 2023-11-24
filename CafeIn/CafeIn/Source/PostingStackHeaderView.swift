@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class PostingCellHeaderView: UIView {
+final class PostingStackHeaderView: UIView {
 
     private let postingHeaderProfileView = PostingHeaderProfileView()
     
@@ -32,7 +32,7 @@ final class PostingCellHeaderView: UIView {
 
 // MARK: Public Interface
 
-extension PostingCellHeaderView {
+extension PostingStackHeaderView {
     
     func configureContents(_ data: (cafeName: String, userName: String, profileImage: UIImage)) {
         postingHeaderProfileView.postingCafeName.text = data.cafeName
@@ -43,7 +43,7 @@ extension PostingCellHeaderView {
 
 // MARK: Configure UI
 
-extension PostingCellHeaderView {
+extension PostingStackHeaderView {
     
     private func configureSubViews() {
         [postingHeaderProfileView, /*cafeAddressLabel*/].forEach {

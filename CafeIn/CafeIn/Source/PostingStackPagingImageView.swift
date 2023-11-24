@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ProfileCellPagingImageView: UIView {
+final class PostingStackPagingImageView: UIView {
     private var images: [UIImage?] = [] {
         didSet {
             configurePageControl()
@@ -41,14 +41,14 @@ final class ProfileCellPagingImageView: UIView {
 }
 
 // MARK: Public Interface
-extension ProfileCellPagingImageView {
+extension PostingStackPagingImageView {
     func configureContents(_ images: [UIImage?]) {
         self.images = images
     }
 }
 
 // MARK: UIScrollView Delegate Implementation
-extension ProfileCellPagingImageView {
+extension PostingStackPagingImageView {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         let width = scrollView.frame.width
@@ -61,7 +61,7 @@ extension ProfileCellPagingImageView {
 }
 
 // MARK: UICollectionView Delegate FlowLayout Implementation
-extension ProfileCellPagingImageView: UICollectionViewDelegateFlowLayout {
+extension PostingStackPagingImageView: UICollectionViewDelegateFlowLayout {
     func collectionView(
         _ collectionView: UICollectionView,
         layout collectionViewLayout: UICollectionViewLayout,
@@ -75,7 +75,7 @@ extension ProfileCellPagingImageView: UICollectionViewDelegateFlowLayout {
 }
 
 // MARK: UICollectionView DataSource Implementation
-extension ProfileCellPagingImageView: UICollectionViewDataSource {
+extension PostingStackPagingImageView: UICollectionViewDataSource {
     func collectionView(
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
@@ -101,7 +101,7 @@ extension ProfileCellPagingImageView: UICollectionViewDataSource {
 }
 
 // MARK: Configure UI
-extension ProfileCellPagingImageView {
+extension PostingStackPagingImageView {
     private func configurePageControl() {
         imagePageControl.numberOfPages = images.count
         imagePageControl.hidesForSinglePage = true
@@ -155,7 +155,6 @@ extension ProfileCellPagingImageView {
                 equalTo: safeArea.heightAnchor,
                 multiplier: 0.05
             )
-
         ])
     }
 }

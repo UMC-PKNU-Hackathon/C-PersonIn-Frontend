@@ -7,36 +7,32 @@
 
 import UIKit
 
-class PostingViewController: UIViewController {
+final class PostingViewController: UIViewController {
     
     let postImages = [UIImage(named: "imageData"), UIImage(named: "imageData"), UIImage(named: "imageData")]
     
 //    let postScrollView = UIScrollView()
 //    let postingContentView = PostingContentView()
     
-    let postArticleStackView = PostArticleStackView()
+    let postingArticleStackView = PostingArticleStackView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        view.backgroundColor = .blue
+        configureInitialSetting()
 //        configureSubViews()
 //        configureLayout()
-        
-        postArticleStackView.profileCellPagingImageView.configureContents(self.postImages)
-        
-        view.backgroundColor = UIColor(red: 1, green: 0.98, blue: 0.943, alpha: 1)
-
-        view.addSubview(postArticleStackView)
-        postArticleStackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            postArticleStackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 82),
-            postArticleStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
-            postArticleStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-        ])
     }
 }
 
+// MARK: Configure Initial Setting
+
+extension PostingViewController {
+    private func configureInitialSetting() {
+        postingArticleStackView.postingStackPagingImageView.configureContents(self.postImages)
+        view.backgroundColor = UIColor(red: 1, green: 0.98, blue: 0.943, alpha: 1)
+
+    }
+}
 
 //// MARK: Configure UI
 //

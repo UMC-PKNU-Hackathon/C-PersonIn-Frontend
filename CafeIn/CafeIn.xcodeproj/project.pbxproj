@@ -12,13 +12,13 @@
 		563879372B1088DA008768F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563879362B1088DA008768F0 /* ViewController.swift */; };
 		5638793C2B1088DC008768F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5638793B2B1088DC008768F0 /* Assets.xcassets */; };
 		5638793F2B1088DC008768F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5638793D2B1088DC008768F0 /* LaunchScreen.storyboard */; };
-		567D7A8B2B10956D00F7837F /* PostingCellHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D7A8A2B10956D00F7837F /* PostingCellHeaderView.swift */; };
+		567D7A8B2B10956D00F7837F /* PostingStackHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D7A8A2B10956D00F7837F /* PostingStackHeaderView.swift */; };
 		567D7A8D2B1096CA00F7837F /* PostingHeaderProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D7A8C2B1096CA00F7837F /* PostingHeaderProfileView.swift */; };
 		567D7A8F2B10979A00F7837F /* CafeInProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D7A8E2B10979A00F7837F /* CafeInProfileImageView.swift */; };
 		567D7A912B10A35E00F7837F /* PostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D7A902B10A35E00F7837F /* PostingViewController.swift */; };
-		567D7A932B10ACB200F7837F /* PostCellBottomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D7A922B10ACB200F7837F /* PostCellBottomButtonView.swift */; };
-		567D7A972B10B97600F7837F /* PostArticleStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D7A962B10B97600F7837F /* PostArticleStackView.swift */; };
-		567D7A992B10BB5600F7837F /* ProfileCellPagingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D7A982B10BB5600F7837F /* ProfileCellPagingImageView.swift */; };
+		567D7A932B10ACB200F7837F /* PostingStackBottomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D7A922B10ACB200F7837F /* PostingStackBottomButtonView.swift */; };
+		567D7A972B10B97600F7837F /* PostingArticleStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D7A962B10B97600F7837F /* PostingArticleStackView.swift */; };
+		567D7A992B10BB5600F7837F /* PostingStackPagingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D7A982B10BB5600F7837F /* PostingStackPagingImageView.swift */; };
 		567D7A9B2B10BB8600F7837F /* PagingImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D7A9A2B10BB8600F7837F /* PagingImageCollectionViewCell.swift */; };
 		567D7A9E2B10BBD700F7837F /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D7A9D2B10BBD700F7837F /* Reusable.swift */; };
 /* End PBXBuildFile section */
@@ -31,13 +31,13 @@
 		5638793B2B1088DC008768F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5638793E2B1088DC008768F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		563879402B1088DC008768F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		567D7A8A2B10956D00F7837F /* PostingCellHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingCellHeaderView.swift; sourceTree = "<group>"; };
+		567D7A8A2B10956D00F7837F /* PostingStackHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingStackHeaderView.swift; sourceTree = "<group>"; };
 		567D7A8C2B1096CA00F7837F /* PostingHeaderProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingHeaderProfileView.swift; sourceTree = "<group>"; };
 		567D7A8E2B10979A00F7837F /* CafeInProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeInProfileImageView.swift; sourceTree = "<group>"; };
 		567D7A902B10A35E00F7837F /* PostingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingViewController.swift; sourceTree = "<group>"; };
-		567D7A922B10ACB200F7837F /* PostCellBottomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellBottomButtonView.swift; sourceTree = "<group>"; };
-		567D7A962B10B97600F7837F /* PostArticleStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostArticleStackView.swift; sourceTree = "<group>"; };
-		567D7A982B10BB5600F7837F /* ProfileCellPagingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCellPagingImageView.swift; sourceTree = "<group>"; };
+		567D7A922B10ACB200F7837F /* PostingStackBottomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingStackBottomButtonView.swift; sourceTree = "<group>"; };
+		567D7A962B10B97600F7837F /* PostingArticleStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingArticleStackView.swift; sourceTree = "<group>"; };
+		567D7A982B10BB5600F7837F /* PostingStackPagingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingStackPagingImageView.swift; sourceTree = "<group>"; };
 		567D7A9A2B10BB8600F7837F /* PagingImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		567D7A9D2B10BBD700F7837F /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,8 +130,8 @@
 		567D7A882B10939600F7837F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				567D7AA22B10C57F00F7837F /* PostArticleStackViewComponentView */,
-				567D7A962B10B97600F7837F /* PostArticleStackView.swift */,
+				567D7AA22B10C57F00F7837F /* PostingArticleStackViewComponentView */,
+				567D7A962B10B97600F7837F /* PostingArticleStackView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -155,20 +155,20 @@
 			isa = PBXGroup;
 			children = (
 				567D7A9A2B10BB8600F7837F /* PagingImageCollectionViewCell.swift */,
-				567D7A982B10BB5600F7837F /* ProfileCellPagingImageView.swift */,
+				567D7A982B10BB5600F7837F /* PostingStackPagingImageView.swift */,
 			);
 			name = PaginImageView;
 			sourceTree = "<group>";
 		};
-		567D7AA22B10C57F00F7837F /* PostArticleStackViewComponentView */ = {
+		567D7AA22B10C57F00F7837F /* PostingArticleStackViewComponentView */ = {
 			isa = PBXGroup;
 			children = (
 				567D7A9F2B10BBEF00F7837F /* PaginImageView */,
 				567D7A8C2B1096CA00F7837F /* PostingHeaderProfileView.swift */,
-				567D7A8A2B10956D00F7837F /* PostingCellHeaderView.swift */,
-				567D7A922B10ACB200F7837F /* PostCellBottomButtonView.swift */,
+				567D7A8A2B10956D00F7837F /* PostingStackHeaderView.swift */,
+				567D7A922B10ACB200F7837F /* PostingStackBottomButtonView.swift */,
 			);
-			name = PostArticleStackViewComponentView;
+			name = PostingArticleStackViewComponentView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,13 +245,13 @@
 				567D7A9B2B10BB8600F7837F /* PagingImageCollectionViewCell.swift in Sources */,
 				567D7A912B10A35E00F7837F /* PostingViewController.swift in Sources */,
 				567D7A8D2B1096CA00F7837F /* PostingHeaderProfileView.swift in Sources */,
-				567D7A932B10ACB200F7837F /* PostCellBottomButtonView.swift in Sources */,
+				567D7A932B10ACB200F7837F /* PostingStackBottomButtonView.swift in Sources */,
 				567D7A9E2B10BBD700F7837F /* Reusable.swift in Sources */,
-				567D7A992B10BB5600F7837F /* ProfileCellPagingImageView.swift in Sources */,
+				567D7A992B10BB5600F7837F /* PostingStackPagingImageView.swift in Sources */,
 				563879332B1088DA008768F0 /* AppDelegate.swift in Sources */,
-				567D7A8B2B10956D00F7837F /* PostingCellHeaderView.swift in Sources */,
+				567D7A8B2B10956D00F7837F /* PostingStackHeaderView.swift in Sources */,
 				567D7A8F2B10979A00F7837F /* CafeInProfileImageView.swift in Sources */,
-				567D7A972B10B97600F7837F /* PostArticleStackView.swift in Sources */,
+				567D7A972B10B97600F7837F /* PostingArticleStackView.swift in Sources */,
 				563879352B1088DA008768F0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
