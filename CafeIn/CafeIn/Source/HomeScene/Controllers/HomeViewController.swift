@@ -26,11 +26,22 @@ class HomeViewController: UIViewController {
         view = homeBackGroundView
     }
 
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSubViews()
         configureLayout()
         configureInitialSetting()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 }
 
@@ -41,6 +52,16 @@ extension HomeViewController {
         collectionView.backgroundColor = .clear
         
         navigationController?.isNavigationBarHidden = true
+        let backBarButton = UIBarButtonItem(
+            title: "",
+            style: .plain,
+            target: self,
+            action: nil
+        )
+        
+        backBarButton.tintColor = .black
+        
+        navigationItem.backBarButtonItem = backBarButton
         
         collectionView.delegate = self
         collectionView.dataSource = self

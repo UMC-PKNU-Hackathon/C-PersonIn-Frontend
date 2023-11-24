@@ -23,11 +23,22 @@ final class PostingViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.isNavigationBarHidden = false
         configureInitialSetting()
         configureSubViews()
         configureLayout()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
     }
 }
 
@@ -59,7 +70,7 @@ extension PostingViewController {
         NSLayoutConstraint.activate([
             postingArticleStackView.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 5),
             postingArticleStackView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 5),
-            postingArticleStackView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: 5),
+            postingArticleStackView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -5),
         ])
     }
 }
