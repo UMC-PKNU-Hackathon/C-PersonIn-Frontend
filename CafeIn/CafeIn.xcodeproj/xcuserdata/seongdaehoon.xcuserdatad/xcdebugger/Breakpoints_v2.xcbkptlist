@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "EFC53D68-373C-42DB-9652-F6C191165961"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D8722CF6-5B4B-430A-8BE3-03575E2B5F73"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CafeIn/Source/Application/HomeScene/Controllers/HomeViewController.swift"
+            startingColumnNumber = "24"
+            endingColumnNumber = "24"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "configureInitialSetting()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
