@@ -12,6 +12,15 @@
 		563879372B1088DA008768F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563879362B1088DA008768F0 /* ViewController.swift */; };
 		5638793C2B1088DC008768F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5638793B2B1088DC008768F0 /* Assets.xcassets */; };
 		5638793F2B1088DC008768F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5638793D2B1088DC008768F0 /* LaunchScreen.storyboard */; };
+		567D7A8B2B10956D00F7837F /* PostingStackHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D7A8A2B10956D00F7837F /* PostingStackHeaderView.swift */; };
+		567D7A8D2B1096CA00F7837F /* PostingHeaderProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D7A8C2B1096CA00F7837F /* PostingHeaderProfileView.swift */; };
+		567D7A8F2B10979A00F7837F /* CafeInProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D7A8E2B10979A00F7837F /* CafeInProfileImageView.swift */; };
+		567D7A912B10A35E00F7837F /* PostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D7A902B10A35E00F7837F /* PostingViewController.swift */; };
+		567D7A932B10ACB200F7837F /* PostingStackBottomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D7A922B10ACB200F7837F /* PostingStackBottomButtonView.swift */; };
+		567D7A972B10B97600F7837F /* PostingArticleStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D7A962B10B97600F7837F /* PostingArticleStackView.swift */; };
+		567D7A992B10BB5600F7837F /* PostingStackPagingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D7A982B10BB5600F7837F /* PostingStackPagingImageView.swift */; };
+		567D7A9B2B10BB8600F7837F /* PagingImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D7A9A2B10BB8600F7837F /* PagingImageCollectionViewCell.swift */; };
+		567D7A9E2B10BBD700F7837F /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567D7A9D2B10BBD700F7837F /* Reusable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +31,15 @@
 		5638793B2B1088DC008768F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5638793E2B1088DC008768F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		563879402B1088DC008768F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		567D7A8A2B10956D00F7837F /* PostingStackHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingStackHeaderView.swift; sourceTree = "<group>"; };
+		567D7A8C2B1096CA00F7837F /* PostingHeaderProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingHeaderProfileView.swift; sourceTree = "<group>"; };
+		567D7A8E2B10979A00F7837F /* CafeInProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeInProfileImageView.swift; sourceTree = "<group>"; };
+		567D7A902B10A35E00F7837F /* PostingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingViewController.swift; sourceTree = "<group>"; };
+		567D7A922B10ACB200F7837F /* PostingStackBottomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingStackBottomButtonView.swift; sourceTree = "<group>"; };
+		567D7A962B10B97600F7837F /* PostingArticleStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingArticleStackView.swift; sourceTree = "<group>"; };
+		567D7A982B10BB5600F7837F /* PostingStackPagingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingStackPagingImageView.swift; sourceTree = "<group>"; };
+		567D7A9A2B10BB8600F7837F /* PagingImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		567D7A9D2B10BBD700F7837F /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,19 +72,20 @@
 		563879312B1088DA008768F0 /* CafeIn */ = {
 			isa = PBXGroup;
 			children = (
-				563879462B10891F008768F0 /* Soruce */,
+				563879462B10891F008768F0 /* Source */,
 				563879472B108923008768F0 /* Resource */,
 				563879362B1088DA008768F0 /* ViewController.swift */,
 			);
 			path = CafeIn;
 			sourceTree = "<group>";
 		};
-		563879462B10891F008768F0 /* Soruce */ = {
+		563879462B10891F008768F0 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				567D7A862B10938800F7837F /* PostingScene */,
 				563879482B108936008768F0 /* Application */,
 			);
-			path = Soruce;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		563879472B108923008768F0 /* Resource */ = {
@@ -84,8 +103,72 @@
 			children = (
 				563879322B1088DA008768F0 /* AppDelegate.swift */,
 				563879342B1088DA008768F0 /* SceneDelegate.swift */,
+				567D7A8E2B10979A00F7837F /* CafeInProfileImageView.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		567D7A862B10938800F7837F /* PostingScene */ = {
+			isa = PBXGroup;
+			children = (
+				567D7A9C2B10BBCB00F7837F /* Util */,
+				567D7A892B1093AD00F7837F /* Models */,
+				567D7A882B10939600F7837F /* Views */,
+				567D7A872B10938E00F7837F /* Controllers */,
+			);
+			name = PostingScene;
+			sourceTree = "<group>";
+		};
+		567D7A872B10938E00F7837F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				567D7A902B10A35E00F7837F /* PostingViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		567D7A882B10939600F7837F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				567D7AA22B10C57F00F7837F /* PostingArticleStackViewComponentView */,
+				567D7A962B10B97600F7837F /* PostingArticleStackView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		567D7A892B1093AD00F7837F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		567D7A9C2B10BBCB00F7837F /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				567D7A9D2B10BBD700F7837F /* Reusable.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		567D7A9F2B10BBEF00F7837F /* PaginImageView */ = {
+			isa = PBXGroup;
+			children = (
+				567D7A9A2B10BB8600F7837F /* PagingImageCollectionViewCell.swift */,
+				567D7A982B10BB5600F7837F /* PostingStackPagingImageView.swift */,
+			);
+			name = PaginImageView;
+			sourceTree = "<group>";
+		};
+		567D7AA22B10C57F00F7837F /* PostingArticleStackViewComponentView */ = {
+			isa = PBXGroup;
+			children = (
+				567D7A9F2B10BBEF00F7837F /* PaginImageView */,
+				567D7A8C2B1096CA00F7837F /* PostingHeaderProfileView.swift */,
+				567D7A8A2B10956D00F7837F /* PostingStackHeaderView.swift */,
+				567D7A922B10ACB200F7837F /* PostingStackBottomButtonView.swift */,
+			);
+			name = PostingArticleStackViewComponentView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,7 +242,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				563879372B1088DA008768F0 /* ViewController.swift in Sources */,
+				567D7A9B2B10BB8600F7837F /* PagingImageCollectionViewCell.swift in Sources */,
+				567D7A912B10A35E00F7837F /* PostingViewController.swift in Sources */,
+				567D7A8D2B1096CA00F7837F /* PostingHeaderProfileView.swift in Sources */,
+				567D7A932B10ACB200F7837F /* PostingStackBottomButtonView.swift in Sources */,
+				567D7A9E2B10BBD700F7837F /* Reusable.swift in Sources */,
+				567D7A992B10BB5600F7837F /* PostingStackPagingImageView.swift in Sources */,
 				563879332B1088DA008768F0 /* AppDelegate.swift in Sources */,
+				567D7A8B2B10956D00F7837F /* PostingStackHeaderView.swift in Sources */,
+				567D7A8F2B10979A00F7837F /* CafeInProfileImageView.swift in Sources */,
+				567D7A972B10B97600F7837F /* PostingArticleStackView.swift in Sources */,
 				563879352B1088DA008768F0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,7 +409,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = reo.com.CafeIn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rereo.CafeIn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -345,7 +437,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = reo.com.CafeIn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rereo.CafeIn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
