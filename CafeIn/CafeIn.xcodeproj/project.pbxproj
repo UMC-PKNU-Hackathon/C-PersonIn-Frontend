@@ -28,6 +28,8 @@
 		56CE62892B110E43005BA881 /* PostingArticleStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CE62882B110E43005BA881 /* PostingArticleStackView.swift */; };
 		56CE628C2B110E6C005BA881 /* PostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CE628B2B110E6C005BA881 /* PostingViewController.swift */; };
 		56CE628E2B110F96005BA881 /* CafeinProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CE628D2B110F96005BA881 /* CafeinProfileImageView.swift */; };
+		56EEB2652B11259E00F60B4F /* HashTagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EEB2642B11259E00F60B4F /* HashTagCollectionViewCell.swift */; };
+		56EEB2672B1126C000F60B4F /* HashTagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EEB2662B1126C000F60B4F /* HashTagsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		56CE62882B110E43005BA881 /* PostingArticleStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingArticleStackView.swift; sourceTree = "<group>"; };
 		56CE628B2B110E6C005BA881 /* PostingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingViewController.swift; sourceTree = "<group>"; };
 		56CE628D2B110F96005BA881 /* CafeinProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeinProfileImageView.swift; sourceTree = "<group>"; };
+		56EEB2642B11259E00F60B4F /* HashTagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagCollectionViewCell.swift; sourceTree = "<group>"; };
+		56EEB2662B1126C000F60B4F /* HashTagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +226,7 @@
 		56CE627B2B110D4F005BA881 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				56EEB2632B11256800F60B4F /* HashTagView */,
 				56CE627C2B110D5A005BA881 /* PostingArticleStackViewComponentView */,
 				56CE62882B110E43005BA881 /* PostingArticleStackView.swift */,
 			);
@@ -270,6 +275,15 @@
 				123C633F2B10FDB600575CE6 /* SearchViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		56EEB2632B11256800F60B4F /* HashTagView */ = {
+			isa = PBXGroup;
+			children = (
+				56EEB2642B11259E00F60B4F /* HashTagCollectionViewCell.swift */,
+				56EEB2662B1126C000F60B4F /* HashTagsView.swift */,
+			);
+			path = HashTagView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				123C63422B11078700575CE6 /* ViewController.swift in Sources */,
+				56EEB2652B11259E00F60B4F /* HashTagCollectionViewCell.swift in Sources */,
 				56CE62792B110D39005BA881 /* Reusable.swift in Sources */,
 				56CE627F2B110D9D005BA881 /* PagingImageCollectionViewCell.swift in Sources */,
 				123C630D2B10A12800575CE6 /* HomeViewController.swift in Sources */,
@@ -356,6 +371,7 @@
 				563879332B1088DA008768F0 /* AppDelegate.swift in Sources */,
 				563879352B1088DA008768F0 /* SceneDelegate.swift in Sources */,
 				123C63052B10990600575CE6 /* MyPageViewController.swift in Sources */,
+				56EEB2672B1126C000F60B4F /* HashTagsView.swift in Sources */,
 				56CE62812B110DB2005BA881 /* PostingStackPagingImageView.swift in Sources */,
 				56CE62892B110E43005BA881 /* PostingArticleStackView.swift in Sources */,
 				123C63332B10B5A000575CE6 /* HomeBackgroundView.swift in Sources */,

@@ -13,12 +13,56 @@ final class PostingArticleStackView: UIStackView {
     
     let postingStackPagingImageView = PostingStackPagingImageView()
     
+    let hashTagsView = HashTagsView()
+    
+    let hashTagLabel1: PaddedLabel = {
+        let label = PaddedLabel()
+        label.text = "분위기 좋은"
+        label.font = .systemFont(ofSize: 14)
+        label.textAlignment = .center
+        
+        label.layer.borderColor = UIColor(red: 0.459, green: 0.376, blue: 0.302, alpha: 1).cgColor
+        label.layer.borderWidth = 1
+        return label
+    }()
+    
+    let hashTagLabel2: PaddedLabel = {
+        let label = PaddedLabel()
+        label.text = "커피가 맛있는"
+        label.font = .systemFont(ofSize: 14)
+        label.textAlignment = .center
+        
+        label.layer.borderColor = UIColor(red: 0.459, green: 0.376, blue: 0.302, alpha: 1).cgColor
+        label.layer.borderWidth = 1
+        return label
+    }()
+    
+    let hashTagLabel3: PaddedLabel = {
+        let label = PaddedLabel()
+        label.text = "콘센트 있는"
+        label.font = .systemFont(ofSize: 14)
+        label.textAlignment = .center
+        
+        label.layer.borderColor = UIColor(red: 0.459, green: 0.376, blue: 0.302, alpha: 1).cgColor
+        label.layer.borderWidth = 1
+        return label
+    }()
+    
+    private lazy var hashTagStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [hashTagLabel1, hashTagLabel2, hashTagLabel3])
+        stackView.axis = .horizontal
+        stackView.distribution = .fill
+        stackView.alignment = .center
+        stackView.spacing = 10
+        return stackView
+    }()
+    
     private let postingStackBottomButtonView = PostingStackBottomButtonView()
     
     private let postLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.font = UIFont.systemFont(ofSize: 16)
         label.numberOfLines = 0
         label.text = "부산 전포동에 있는 카페입니다. 커피가 친절하고 사장님이 맛있어요."
         return label
@@ -47,15 +91,69 @@ extension PostingArticleStackView {
     }
     
     private func configureSubViews() {
-        [postingCellHeaderView, postingStackPagingImageView, postingStackBottomButtonView, postLabel].forEach {
+        [postingCellHeaderView, postingStackPagingImageView, hashTagStackView, postingStackBottomButtonView, postLabel].forEach {
             addArrangedSubview($0)
-            $0.translatesAutoresizingMaskIntoConstraints = false
         }
     }
     
     private func configureLayout() {
         NSLayoutConstraint.activate([
-            postingStackPagingImageView.heightAnchor.constraint(equalTo: postingStackPagingImageView.widthAnchor)
+            postingStackPagingImageView.heightAnchor.constraint(equalTo: postingStackPagingImageView.widthAnchor),
+            
         ])
     }
 }
+
+class PaddedLabel: UILabel {
+    var topInset: CGFloat = 5.0
+    var bottomInset: CGFloat = 5.0
+    var leftInset: CGFloat = 10.0
+    var rightInset: CGFloat = 10.0
+
+    override func drawText(in rect: CGRect) {
+        let insets = UIEdgeInsets(top: topInset, left: leftInset, bottom: bottomInset, right: rightInset)
+        super.drawText(in: rect.inset(by: insets))
+    }
+
+    override var intrinsicContentSize: CGSize {
+        let size = super.intrinsicContentSize
+        return CGSize(width: size.width + leftInset + rightInset, height: size.height + topInset + bottomInset)
+    }
+}
+
+
+#if canImport(SwiftUI) && DEBUG
+import SwiftUI
+struct UIViewPreview<View: UIView>: UIViewRepresentable {
+    let view: View
+
+    init(_ builder: @escaping () -> View) {
+        view = builder()
+    }
+
+    // MARK: - UIViewRepresentable
+
+    func makeUIView(context: Context) -> UIView {
+        return view
+    }
+
+    func updateUIView(_ view: UIView, context: Context) {
+        view.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+        view.setContentHuggingPriority(.defaultHigh, for: .vertical)
+    }
+}
+
+#endif
+
+#if canImport(SwiftUI) && DEBUG
+import SwiftUI
+
+struct Preview: PreviewProvider{
+    static var previews: some View {
+        UIViewPreview {
+            let myView = PostingArticleStackView()
+            return myView
+        }.previewLayout(.sizeThatFits)
+    }
+}
+#endif

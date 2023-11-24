@@ -10,17 +10,24 @@ import UIKit
 final class PostingViewController: UIViewController {
     
     let postImages = [UIImage(named: "imageData"), UIImage(named: "imageData"), UIImage(named: "imageData")]
+    let hashTags = ["분위기가 좋은", "커피가 맛있는", "조용한"]
     
-//    let postScrollView = UIScrollView()
-//    let postingContentView = PostingContentView()
     
     let postingArticleStackView = PostingArticleStackView()
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        [postingArticleStackView.hashTagLabel1, postingArticleStackView.hashTagLabel2, postingArticleStackView.hashTagLabel3].forEach {
+            $0.layer.cornerRadius = $0.frame.height / 2
+            $0.clipsToBounds = true
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureInitialSetting()
-//        configureSubViews()
-//        configureLayout()
+        configureSubViews()
+        configureLayout()
     }
 }
 
@@ -29,41 +36,30 @@ final class PostingViewController: UIViewController {
 extension PostingViewController {
     private func configureInitialSetting() {
         postingArticleStackView.postingStackPagingImageView.configureContents(self.postImages)
+        postingArticleStackView.hashTagsView.configureContents(self.hashTags)
         view.backgroundColor = UIColor(red: 1, green: 0.98, blue: 0.943, alpha: 1)
 
     }
 }
 
-//// MARK: Configure UI
-//
-//extension PostingViewController {
-//
-//    private func configureSubViews() {
-//
-//        view.addSubview(postScrollView)
-//        postScrollView.addSubview(postingContentView)
-//        [postingContentView].forEach {
-//            view.addSubview($0)
-//            $0.translatesAutoresizingMaskIntoConstraints = false
-//        }
-//    }
-//
-//    private func configureLayout() {
-//        let safeArea = view.safeAreaLayoutGuide
-//
-//        NSLayoutConstraint.activate([
-//
-//
-//
-//            postScrollView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-//            postScrollView.topAnchor.constraint(equalTo: safeArea.topAnchor),
-//            postScrollView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor),
-//            postScrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-//
-//            postingContentView.topAnchor.constraint(equalTo: postScrollView.topAnchor),
-//            postingContentView.bottomAnchor.constraint(equalTo: postScrollView.bottomAnchor),
-//            postingContentView.leadingAnchor.constraint(equalTo: postScrollView.leadingAnchor),
-//            postingContentView.trailingAnchor.constraint(equalTo: postScrollView.trailingAnchor),
-//        ])
-//    }
-//}
+// MARK: Configure UI
+
+extension PostingViewController {
+
+    private func configureSubViews() {
+        [postingArticleStackView].forEach {
+            view.addSubview($0)
+            $0.translatesAutoresizingMaskIntoConstraints = false
+        }
+    }
+
+    private func configureLayout() {
+        let safeArea = view.safeAreaLayoutGuide
+
+        NSLayoutConstraint.activate([
+            postingArticleStackView.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 5),
+            postingArticleStackView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 5),
+            postingArticleStackView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: 5),
+        ])
+    }
+}
