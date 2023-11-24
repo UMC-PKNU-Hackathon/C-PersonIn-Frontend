@@ -42,6 +42,7 @@ extension HomeViewController {
         
         navigationController?.isNavigationBarHidden = true
         
+        collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(HomeCell.self, forCellWithReuseIdentifier: HomeCell.cellID)
         collectionView.showsVerticalScrollIndicator = false
@@ -70,6 +71,13 @@ extension HomeViewController {
         let layout = UICollectionViewCompositionalLayout(section: section)
         
         return layout
+    }
+}
+
+extension HomeViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let postingViewController = PostingViewController()
+        navigationController?.pushViewController(postingViewController, animated: true)
     }
 }
 
