@@ -9,8 +9,8 @@ import UIKit
 
 final class PostingViewController: UIViewController {
     
-    let postImages = [UIImage(named: "imageData"), UIImage(named: "imageData"), UIImage(named: "imageData")]
-    let hashTags = ["분위기가 좋은", "커피가 맛있는", "조용한"]
+    private let postImages = [UIImage(named: "cafe1"), UIImage(named: "imageData"), UIImage(named: "imageData")]
+    private let hashTags = ["분위기가 좋은", "커피가 맛있는", "조용한"]
     
     
     let postingArticleStackView = PostingArticleStackView()
@@ -69,8 +69,8 @@ extension PostingViewController {
 
         NSLayoutConstraint.activate([
             postingArticleStackView.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 5),
-            postingArticleStackView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 5),
-            postingArticleStackView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -5),
+            postingArticleStackView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 10),
+            postingArticleStackView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -10),
         ])
     }
 }
