@@ -41,10 +41,10 @@ extension HashTagCollectionViewCell {
     
     private func configureLayout() {
         NSLayoutConstraint.activate([
-            hashTagLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
-            hashTagLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            hashTagLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            hashTagLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            hashTagLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            hashTagLabel.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -5),
+            hashTagLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+            hashTagLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
         ])
     }
 }

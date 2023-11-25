@@ -15,7 +15,7 @@ class HashTagsView: UIView {
         }
     }
     
-    private let hashTagCollectionView: UICollectionView = {
+    let hashTagCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.minimumInteritemSpacing = 5
@@ -24,6 +24,7 @@ class HashTagsView: UIView {
             frame: .zero,
             collectionViewLayout: layout
         )
+        collectionView.backgroundColor = .clear
         return collectionView
     }()
     
@@ -32,6 +33,7 @@ class HashTagsView: UIView {
         configurePagingImageCollectionView()
         configureSubview()
         configureLayout()
+        hashTagCollectionView.delegate = self
     }
 }
 
@@ -56,6 +58,7 @@ extension HashTagsView {
 //}
 
 // MARK: UICollectionView Delegate FlowLayout Implementation
+
 extension HashTagsView: UICollectionViewDelegateFlowLayout {
     func collectionView(
         _ collectionView: UICollectionView,
@@ -72,6 +75,7 @@ extension HashTagsView: UICollectionViewDelegateFlowLayout {
 }
 
 // MARK: UICollectionView DataSource Implementation
+
 extension HashTagsView: UICollectionViewDataSource {
     func collectionView(
         _ collectionView: UICollectionView,
